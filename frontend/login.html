@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Portal Sign In | Cognizant University</title><link rel="stylesheet" href="/assets/styles.css"></head>
+<body>
+  <header class="site-header"><div class="header-inner"><a class="brand" href="/"><span class="brand-mark">CU</span><span>Cognizant University<small>Academic Management System</small></span></a></div></header>
+  <main class="narrow login-shell">
+    <section class="login-intro"><span class="eyebrow">Welcome back</span><h1>Your academic workspace is ready.</h1><p>Choose your account type and use the credentials issued by the university administrator.</p></section>
+    <form id="login-form" class="portal-card login-card">
+      <span class="eyebrow">Secure portal</span><h2>Sign in to continue</h2>
+      <label for="role">Account type</label><select id="role" required><option value="">Select account type</option><option value="ADMIN">Administrator</option><option value="FACULTY">Faculty</option><option value="STUDENT">Student</option></select>
+      <label for="username">Username or email</label><input id="username" autocomplete="username" minlength="2" maxlength="120" placeholder="Enter username or email" required>
+      <label for="password">Password</label><input id="password" type="password" autocomplete="current-password" minlength="6" maxlength="72" placeholder="Enter password" required>
+      <p id="message" class="message" aria-live="polite"></p><button type="submit">Sign in securely</button><a class="back" href="/">Return to university home</a>
+    </form>
+  </main>
+  <script src="/assets/api.js"></script><script src="/assets/login.js"></script>
+</body>
+</html>
