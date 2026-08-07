@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Student Portal | Cognizant University</title><link rel="stylesheet" href="/assets/styles.css"></head>
+<body>
+  <header class="site-header"><div class="header-inner"><a class="brand" href="/"><span class="brand-mark">CU</span><span>Cognizant University<small>Student portal</small></span></a><div class="header-actions"><span class="user-chip"><strong id="current-user"></strong><small>Student</small></span><button class="secondary" onclick="UamsApi.logout()">Sign out</button></div></div></header>
+  <main>
+    <div class="page-heading"><div><span class="eyebrow">Student portal</span><h1>My academic record</h1><p>Keep your profile current, manage courses, and review results.</p></div></div>
+    <nav class="section-tabs"><a href="#profile">Profile</a><a href="#catalogue">Course catalogue</a><a href="#enrollment">My courses</a><a href="#results">Results</a></nav>
+    <p id="message" class="message" aria-live="polite"></p>
+    <div class="grid two">
+      <form id="profile-form" class="card"><h2 id="profile">Student profile</h2>
+        <label for="profile-name">Full name</label><input id="profile-name" name="name" minlength="2" maxlength="80" placeholder="Full name" required>
+        <label for="profile-email">University email</label><input id="profile-email" name="email" type="email" maxlength="120" placeholder="student@university.edu" required>
+        <label for="profile-contact">Contact number</label><input id="profile-contact" name="contactNumber" inputmode="tel" pattern="[0-9+() -]{7,20}" data-pattern-message="Use 7–20 digits or phone symbols." placeholder="+91 98765 43210" required>
+        <label for="profile-department">Department</label><input id="profile-department" name="department" readonly required>
+        <label for="profile-year">Enrollment year</label><input id="profile-year" name="enrollmentYear" type="number" min="2000" max="2100" readonly required>
+        <div class="form-actions"><button type="submit">Save profile</button></div>
+      </form>
+      <section class="card" id="catalogue"><h2>Available courses</h2><div class="table-wrap"><table><thead><tr><th>Course</th><th>Credits</th><th>Action</th></tr></thead><tbody id="available"></tbody></table></div></section>
+    </div>
+    <section class="card" id="enrollment"><h2>Current enrollment</h2><div class="table-wrap"><table><thead><tr><th>Course</th><th>Status</th><th>Action</th></tr></thead><tbody id="enrolled"></tbody></table></div></section>
+    <section class="card" id="results"><div class="card-heading"><h2>Academic results</h2><button type="button" class="small" id="download-transcript">Download grade sheet PDF</button></div><div class="table-wrap"><table><thead><tr><th>Course</th><th>Grade</th><th>Remarks</th></tr></thead><tbody id="grades"></tbody></table></div></section>
+  </main>
+  <script src="/assets/api.js"></script><script src="/assets/student.js"></script>
+</body>
+</html>
