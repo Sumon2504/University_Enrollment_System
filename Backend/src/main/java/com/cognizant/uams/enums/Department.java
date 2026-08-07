@@ -1,0 +1,11 @@
+package com.cognizant.uams.enums;
+
+public enum Department {
+    COMPUTER_SCIENCE,
+    INFORMATION_TECHNOLOGY,
+    MECHANICAL_ENGINEERING,
+    CIVIL_ENGINEERING,
+    BUSINESS_ADMINISTRATION,
+    MATHEMATICS,
+    PHYSICS
+}
