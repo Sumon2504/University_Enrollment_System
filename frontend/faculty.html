@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Faculty Workspace | Cognizant University</title><link rel="stylesheet" href="/assets/styles.css"></head>
+<body>
+  <header class="site-header"><div class="header-inner"><a class="brand" href="/"><span class="brand-mark">CU</span><span>Cognizant University<small>Faculty workspace</small></span></a><div class="header-actions"><span class="user-chip"><strong id="current-user"></strong><small>Faculty</small></span><button class="secondary" onclick="UamsApi.logout()">Sign out</button></div></div></header>
+  <main>
+    <div class="page-heading"><div><span class="eyebrow">Faculty workspace</span><h1>Course assessment</h1><p>Review enrolled students and maintain verified grade records.</p></div></div>
+    <p id="message" class="message" aria-live="polite"></p>
+    <section class="card"><h2>Course roster and grading</h2><label for="course">Active course</label><select id="course" required></select><div class="table-wrap"><table><thead><tr><th>Student ID</th><th>Student</th><th>Grade</th><th>Remarks</th><th>Action</th></tr></thead><tbody id="roster"></tbody></table></div></section>
+    <section class="card"><h2>Recorded results</h2><div class="table-wrap"><table><thead><tr><th>Student</th><th>Course</th><th>Grade</th><th>Remarks</th></tr></thead><tbody id="records"></tbody></table></div></section>
+  </main>
+  <script src="/assets/api.js"></script><script src="/assets/faculty.js"></script>
+</body>
+</html>
